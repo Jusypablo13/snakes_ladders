@@ -14,7 +14,7 @@ int main(int argc, char* argv[]) {
     int reward = atoi(argv[5]);
     int numPlayers = atoi(argv[6]);
     int maxTurns = atoi(argv[7]);
-    char gameType = argv[8][0];
+    char gameType = argv[8][1];
 
     MyGame game(numTiles, numSnakes, numLadders, penalty, reward, numPlayers, maxTurns, gameType);
     game.start();
