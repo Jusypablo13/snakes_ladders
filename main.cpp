@@ -4,25 +4,33 @@
 
 using namespace std;
 
-int main(int argc, char* argv[]) {
-    cout << "Number of arguments: " << argc << endl;
-    for (int i = 0; i < argc; ++i) {
-        cout << "Argument " << i << ": " << argv[i] << endl;
-    }
+int main() {
+    int numTiles, numSnakes, numLadders, penalty, reward, numPlayers, maxTurns;
+    char gameType;
 
-    if (argc != 9) {
-        cout << "Usage: " << argv[0] << " <numTiles> <numSnakes> <numLadders> <penalty> <reward> <numPlayers> <maxTurns> <gameType>" << endl;
-        return 1;
-    }
+    cout << "Enter number of tiles: ";
+    cin >> numTiles;
 
-    int numTiles = atoi(argv[1]);
-    int numSnakes = atoi(argv[2]);
-    int numLadders = atoi(argv[3]);
-    int penalty = atoi(argv[4]);
-    int reward = atoi(argv[5]);
-    int numPlayers = atoi(argv[6]);
-    int maxTurns = atoi(argv[7]);
-    char gameType = argv[8][0];
+    cout << "Enter number of snakes: ";
+    cin >> numSnakes;
+
+    cout << "Enter number of ladders: ";
+    cin >> numLadders;
+
+    cout << "Enter penalty for landing on a snake: ";
+    cin >> penalty;
+
+    cout << "Enter reward for landing on a ladder: ";
+    cin >> reward;
+
+    cout << "Enter number of players: ";
+    cin >> numPlayers;
+
+    cout << "Enter maximum number of turns: ";
+    cin >> maxTurns;
+
+    cout << "Enter game type (A for automatic, M for manual): ";
+    cin >> gameType;
 
     cout << "numTiles: " << numTiles << endl;
     cout << "numSnakes: " << numSnakes << endl;
